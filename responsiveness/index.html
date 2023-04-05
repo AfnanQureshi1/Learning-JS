@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        span {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+            padding: 10px;
+        }
+
+        span:nth-child(odd) {
+            width: 50%;
+            float: left;
+        }
+
+        span:nth-child(even) {
+            width: 50%;
+            float: right;
+        }
+
+        span:last-child {
+            width: 100%;
+            float: none;
+        }
+    </style>
+</head>
+
+<body>
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>
+</body>
+
+</html>

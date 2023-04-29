@@ -29,6 +29,31 @@ h2{
 }
 
 ul{
-    list-style-position: inside;
+    list-style-type: none;
+
 }
 
+li {
+    border-top: 1px solid orangered;
+}
+
+li a {
+    display: block;
+}
+
+li a,
+li a:visited {
+    text-decoration: none;
+    color: 333px;
+}
+
+li a:hover,
+li a:focus{
+    background: grey;
+    color:bisque;
+    cursor:pointer;
+}
+
+li:last-child a {
+    border-radius: 0 0 2rem 2rem;
+}

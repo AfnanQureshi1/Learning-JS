@@ -48,8 +48,35 @@ nav {
 footer {
     bottom: 0;
 }
-@media screen and (min-width:481px) {
 
+/* small */
+@media screen and (min-width:576px) {
+
+    body {
+        background-color: gray;
+        background-image: radial-gradient(whitesmoke, gray
+        );
+    }
+
+    nav {
+        display: none;
+    }
+
+    
+}
+
+/* medium */
+@media screen and (min-width:768px) {
+
+    body {
+        background-color: gold;
+        background-image: radial-gradient(whitesmoke, gold
+        );
+    }
+
+    nav {
+        display: none;
+    }
 
     
 }

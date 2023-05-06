@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Customizable Colored Navbar</title>
+    <style>
+        /* set up default navbar color */
+        .navbar {
+            background-color: #ffffff;
+            color: #000000;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 100px;
+            border-style: dotted;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1>My Web Platform</h1>
+        <form>
+            <label for="color">Select any color for magic:</label>
+            <input type="color" id="color" name="color">
+        </form>
+    </nav>
+
+    <script>
+        // retrieve user's color preference from localStorage
+        const userColor = localStorage.getItem('userColor');
+
+        // update navbar color if user's preference is available
+        if (userColor) {
+            const navbar = document.querySelector('.navbar');
+            navbar.style.backgroundColor = userColor;
+        }
+
+        // attach event listener to color selection form input
+        const colorInput = document.querySelector('#color');
+        colorInput.addEventListener('change', function () {
+            const color = colorInput.value;
+            const navbar = document.querySelector('.navbar');
+            navbar.style.backgroundColor = color;
+
+            // store user's color preference in localStorage
+            localStorage.setItem('userColor', color);
+        });
+    </script>
+</body>
+
+</html>

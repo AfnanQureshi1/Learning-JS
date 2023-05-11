@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>  
+<head><meta charset="utf-8">
+	<title>Search Bar</title>
+</head>
+<body>
+	<label for="search">Search:</label>
+	<input type="text" id="search" name="search">
+	<button onclick="searchFunction()">Search</button>
+
+	<script>
+		function searchFunction() {
+                                let dataArray = [
+                    {
+                        category: 'Fruits',
+                        items: ['apple','strawberry ', 'banana', 'orange']
+                    },
+                    {
+                        category: 'Vegetable',
+                        items: ['carrot', 'cabbiage', 'tomato', 'potato']
+                    },
+                    {
+                        category: 'Color',
+                        items: ['white', 'black', 'green', 'yellow']
+                    }
+                    ];
+
+                    {
+			let searchInput = document.getElementById("search").value.toLowerCase();
+			let searcheditems = [];
+
+			for (let i = 0; i < dataArray.length; i++) {
+				for (let j = 0; j < dataArray[i].items.length; j++) {
+					if (dataArray[i].items[j].toLowerCase().indexOf(searchInput) !== -1) {
+						searcheditems.push({
+							category: dataArray[i].category,
+							item: dataArray[i].items[j]
+						});
+					}
+				}
+			}
+
+			if (searcheditems.length > 0) {
+				console.log('Found items:');
+				for (let i = 0; i < searcheditems.length; i++) {
+					console.log('- ' + searcheditems[i].item + ' (' + searcheditems[i].category + ')');
+				}
+			} else {
+				console.log('Nothing found. Try something else');
+				
+			}
+		}
+		}
+	</script>
+</body>
+</html>
